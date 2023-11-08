@@ -15,6 +15,12 @@ def get_current_weather(city="Manchester"):
 if __name__ == '__main__':
     print('\n*** Get Weather Conditions ***\n')
     city = input("\nPlease enter city name: ")
+
+    if not bool(city.strip()):
+        city = "Manchester"
+
     weather_data = get_current_weather(city)
+
+
     print("\n")
     pprint(weather_data)
